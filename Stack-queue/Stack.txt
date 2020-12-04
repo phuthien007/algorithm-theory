@@ -1,0 +1,19 @@
+-Ngăn xếp là một dạng đặc biệt của danh sách tuyến tính.Trong đó có các phương thức chính là: nap(PUSH), lấy(TOP), hủy(POP)
+-Ngăn xếp thực hiện hoạt động dựa trên cơ chế LIFI, tức là vào sau ra trước. Phần tử mới sẽ được thêm vào đầu của
+Stack, và khi ta lấy một phần tử ra cũng lấy ở đầu.
+-Các phép toán cơ bản và các toán tử phổ biến:
+	+ PUSH(S,object): thêm một phần tử vào ngăn xếp S.
+	+ POP(S): lấy ra một phần tử ở đầu ngăn xếp S, và hủy nó.
+	+ TOP(S): lấy ra giá trị phần tử ở đầu ngăn xếp có thể sử dụng.
+	+ SIZE(S): cho biết kích thước của ngăn xếp.
+	+ ISEMPTY(S): cho biết ngăn xếp S có trống hay không, nếu có trả về true, và ngược lại trả về false.
+-Có 2 cách cài đặt một stack cơ bản: dù là cách nào thì ngăn xếp vẫn hoạt động theo cơ chế LIFO.
+	+ sử dụng mảng
+	+ sử dụng DSLK
+Ứng dụng của ngăn xếp:
+- Ứng dụng trực tiếp:
+	+ Lịch sử web, dãy UNDO trong  bộ soạn thảo văn bản,Chuỗi các hàm được gọi,kiểm tra tính hợp lệ của dấu ngoặc
+	+ Đổi cơ số, Ứng dụng cài đặt chương trình dịch, Tính giá trị biểu thức, Quay lui, khử đệ quy
+- Ứng dụng gián tiếp:
+	+ Cấu trúc dữ liệu hỗ trợ các thuật toán.
+	+ Thành phần của các cấu trúc dữ liệu khác.

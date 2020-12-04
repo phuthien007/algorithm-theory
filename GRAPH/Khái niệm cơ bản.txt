@@ -1,0 +1,82 @@
+ Đồ thị là một cấu trúc rời rạc có tính trực quan cao. Tiện lợi để biểu diễn các quan hệ.
+Có các loại đồ thị: Đồ thị vô hướng (đơn/ đa) và đồ thị có hướng ( đơn/ đa)
+- Đồ thị vô hướng:
+	+ DN: đồ thị vô hướng G = ( V,E) là các cặp gồm:
+	o Tập đỉnh V là tập hữu hạn chứa các đỉnh thuộc đồ thị.
+	o Tập cạnh E là tập hữu hạn chứa các mối quan hệ giữa các đỉnh với nhau không có thứ tự.
+- Đồ thị có hướng:
+	+ DN: đồ thị có hướng G = (V, E) là các cặp gồm:
+	o Tập đỉnh V là tập hữu hạn chứa các đỉnh thuộc đồ thị.
+	o Tập cạnh E là tập hữu hạn có thứ tự, là mối quan hệ giữa các đỉnh trong đồ thị.
+* Một loại đồ thị đặc biệt ít dùng là giả đồ thị, trong đó đồ thị sẽ chứa các khuyên. Khuyên là một cạnh nối 
+chính đỉnh đó.
+Các khái niệm cơ bản:
+1. Kề ( Adjacency)
+ Cho G là đồ thị vô hướng tập cạnh E. Giả sử e= (u,v):
+khi đó: 
+	+ u,v được gọi là hai đỉnh kề nhau/ lân cận/ nối với nhau.
+	+ cạnh e là liên thuộc của u, v.
+	+ cạnh e nối u và v.
+	+ các đỉnh u, v  là các đầu mút của cạnh e.
+ Cho G là đồ thị có hướng tập cạnh E. Giả sử e=(u,v):
+Khi đó:
+	+ u, v là kề nhau/ u kề tới v, v kề từ u.
+	+ e đi ra khỏi u, e đi vào v.
+	+ e nối u với v, e đi từ u tới v.
+	+ đỉnh đầu của e là u, đỉnh cuối là v.
+2. Bậc của đỉnh ( Degree of a Vertex)
+ Dù đồ thị có hướng hay vô hướng thì khái niệm bậc của đỉnh không thay đổi và bằng số cạnh nối từ đỉnh đó ( tổng quát)
+ Đối với đồ thị vô hướng: Bậc của đỉnh là bằng số cạnh nối từ đỉnh đó. Tổng số bậc của một đồ thị bằng 2 lần tổng
+số cạnh của đồ thị đó.
+ Đối với đồ thị có hướng có đỉnh e: Phân ra thành 2 loại:
+	+ Bán bậc vào: là tổng số các cạnh nối tới/ đi vào đỉnh e.
+	+ Bán bậc ra: là tổng số các cạnh nối từ/ đi ra đỉnh e.
+ 	Bậc của đỉnh e bằng tổng bán bậc vào + bán bậc ra.
+3. Đồ thị con ( Subgraphs)
+ DN: đồ thị H=(W,F) được gọi là đồ thị con của G=(E,V) khi WeE và FeV. ký hiệu HeG. ( e là ký hiệu con)
+* Đồ thị con cảm sinh ( Induced Subgraph): Đồ thị con cảm sinh bởi S là đồ thị  cực đại của G với tập đỉnh là S, ký hiệu(<S>).
+Đồ thị con H của G được gọi là đồ thị con cảm sinh đỉnh nếu H=<S>.
+* Loại bỏ đỉnh: là loại bỏ các đỉnh và các cạnh liên thuộc.
+* Đồ thị con cảm sinh cạnh là đồ thị con min với số đỉnh thuộc H.
+* Đồ thị con bao trùm ( Spanning Subgraph):
+	Đồ thị con HeG được gọi là đồ thị con bao trùm của G nếu tập đỉnh của H trùng với G.
+* Hợp của 2 đồ thị: G1 U G2 với G1= (V1,E1), G2= (V2,E2) là đơn đồ thị ( V1 U V2, E1 U E2).
+4. Đồ thị đẳng cấu
+ DN: Hai đồ thị vô hướng G1,G2 được gọi là đẳng cấu (isomorphic) nếu tồn tại một song ánh f: V1-> V2, a,b E V1 là 2 đỉnh liền kề 
+trên G1, thì f(a) , f(b) là hai đỉnh liền kề trên G2.
+5. Đường đi và chu trình.
+* Đường đi đơn: đường đi gọi là đường đi đơn nếu không có đỉnh nào bị lặp lại trên đường đi.
+* Đường đi cơ bản: đường đi được gọi là đường đi cơ bản nếu không có cạnh nào lặp lại trên đường đi.
+* Chu trình: Là đường đi cơ bản có đỉnh đầu trùng với đỉnh cuối.
+	Chu trình được gọi là chu trình đơn nếu ngoài đỉnh đầu và đỉnh cuối thì không có đỉnh nào bị lặp lại.
+6. Tính liên thông.
+Đồ thị vô hướng được gọi là liên thông nếu luôn tìm được đường đi nối 2 đỉnh bất kỳ.
++ Thành phần liên thông: đồ thị con liên thông cực đại của đồ thị vô hướng G được gọi là thành phần liên thông của nó.
+* Đỉnh rẽ nhánh: là đỉnh mà khi loại bỏ nó làm tăng số thành phần liên thông của đồ thị.
+* Cầu: là cạnh mà khi loại bỏ nó làm tăng số thành phần liên thông của đồ thị.
+* Đơn đồ thị vô hướng được gọi là K-liên thông nếu như muốn phá vỡ tính liên thông của nó ta phải loại bỏ k thành phần.
+* Đồ thị có hướng:
+	+ Được gọi là liên thông mạnh nếu luôn tìm được đường đi giữa hai đỉnh bất kỳ.
+	+ Được gọi là liên thông yếu nếu loại bỏ hướng, thu được đồ thị vô hướng liên thông.
+7. Một số loại đồ thị đặc biệt
+* Một số dạng đơn đồ thị vô hướng đặc biệt
+	+ Đồ thị đầy đủ Kn: là một đồ thị liên thông
+	+ Chu trình: 
+	+ Cây và rừng: Cây là một đồ thị vô hướng liên thông không có chu trình. Đồ thị không có chu trình được gọi là rừng.
+	=> Rừng là đồ thị mà mỗi thành phần liên thông của nó là một cây.
+	+ Đồ thị phẳng: đồ thị vô hướng G được gọi là đồ thị phẳng nếu như có thể vẽ được  nó trên một mặt phẳng.
+* ĐỒ THỊ EULER:
++ Chu trình euler: là chu trình đi qua mỗi cạnh đúng một lần.
++ Đường đi euler: là đường đi qua mỗi cạnh của đồ thị đúng một lần.
++ Đồ thị có chu trình euler được gọi là đồ thị euler.
++ Đồ thị có đường đi euler được gọi là nửa đồ thị euler.
++ Định lí euler: Đa đồ thị vô hương liên thông có chu trình euler <=> nó không có bậc lẻ.
+		Đa đồ thị vô hướng liên thông có đường đi euler <=> không quá 2 bậc lẻ.
+* ĐỒ THỊ HAMILTON:
++ Chu trình hamilton: có chu trình đi qua mỗi đỉnh đúng một lần.
++ Đường đi hamilton: có đường đi qua mỗi đỉnh một lần.
++ Đồ thị có chu trình hamilton được gọi là đồ thị hamilton.
++ Đồ thị có đường đi hamilton được gọi là đồ thị nửa hamilton.
++ Định lý Dirac: Nếu G là đơn đồ thị vô hướng liên thông với n=3 đỉnh và deg(v) >= n/2, thì G có chu trình Hamilton.
++ Định lý Ore: Nếu G là đơn đồ thị vô hướng liên thông với n>=3 đỉnh, và deg(u) + deg(v) >=n với mọi u,v không kể nhau
+thì đồ thị G có chu trình Hamilton.

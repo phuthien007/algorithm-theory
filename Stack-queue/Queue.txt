@@ -1,0 +1,22 @@
+Hàng đợi: là danh sách có thứ tự trong đó phương thức chèn luôn được thực hiện ở phía sau, còn phép toán xóa thực 
+hiện tại đầu danh sách. Hàng đợi thực hiện theo nguyên tắc FIFO, tức là vào trước ra trước.
+Các thuộc tính cơ bản:
+	- enqueue: thực hiện thêm một phần tử vào đầu queue
+	- dequeue: thực hiện xóa bỏ một phần tử ở cuối danh sách.
+	- isempty: kiểm tra xem hàng đợi rỗng không, nếu có trả về true,không trả về false
+	- isFull: kiểm tra hàng đợi đầy chưa
+	- size: trả về kích thức của hàng đợi
+Các cách cài đặt đều dựa trên nguyên tắc FIFO:
+- Cài đặt bằng mảng
+- Cài đặt bằng danh sách liên kết
+	+ Có 2 cách cài đặt bằng mảng, ở đây ta sẽ đề cập đến cách dùng mảng quấn quanh:
+		o 2 phần tử trỏ vị trí đầu và cuối của mảng.(front,rear)
+		o khi rear đang ở cuối mảng, danh sách chưa đầy, ta muốn thêm phần tử, sẽ thêm tại array[(rear+1)%size(array)]
+		o Khi muốn xóa một phần tử, biến front đang trỏ ở tới vị trí tiếp theo, nếu nó là cuối mảng, thì trở lại front=0
+		o hàng đợi đầy khi nào? Khi rear+1== front
+		o hàng đợi rỗng khi nào? chúng ta hi sinh 1 ô nhớ, tức là khi front trỏ tới thi sẽ không dùng giá trị
+			của ô đó nữa, vậy rỗng khi rear==front.
+	+ Sử dụng danh sách liên kết cài đặt.
+Ứng dụng của hàng đợi:
+	- Nhận dạng Palindrome
+	- CHuyển đổi xâu về số

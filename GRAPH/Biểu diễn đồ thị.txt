@@ -1,0 +1,42 @@
+Có nhiều cách biểu diễn đồ thị khác nhau, việc lựa chọn cách nào phụ thuộc vào từng yêu cầu của bài toán.Có hai vấn
+đề chính ta cần quan tâm:
++ Bộ nhớ mà cách biểu diễn đó đòi.
++ Thời gian cần thiết để phản hồi lại các truy vấn thường xuyên đối với đồ thị trong quá trình xử lý.
+1. Ma trận kề
+ Có đường đi giữa hai cạnh u,v thì Auv=1 != 0
+ Tính chất ma trận kề:
+ A là ma trận kề vô hướng :
+	+ A là ma trận đối xứng A=AT
+	+ deg(v) = tổng các hàng
+2. Ma trận trọng số( ma trận chi phí):
+ Có đường đi giữa hai cạnh u,v thì Auv= chi phí != 0
+ Tính chất ma trận kề:
+ A là ma trận kề vô hướng 
+3. Danh sách kề
+ Mỗi đỉnh v chứa các danh sách đỉnh kề của nó.
+4. Ma trận liên thuộc đỉnh cạnh( thường được sử dụng biểu diễn ma trận có hướng)
+ Aij= 1 ei đi từ đỉnh i
+      -1 ej đi đến đỉnh j
+      0 nếu không có đầu mút chung
+*** Các thuật toán duyệt đồ thị ***
+ Ta nói duyệt đồ thị là duyệt qua mỗi đỉnh và mỗi cạnh của đồ thị đó.
+ Ứng dụng: để khảo sát đồ thị, là thành phần cơ bản của nhiều thuật toán.
+ Có hai thuật toán cơ bản:
+	+ Tìm kiếm theo chiều rộng ( BFS- Breadth First Search)
+	+ Tìm kiếm theo chiều sâu ( DFS- Depth First Search)   
+ Ý tưởng chung:
+	Trong quá trình thực hiện mỗi đỉnh sẽ có 3 trạng thái:
+	+ Chưa thăm thể hiện màu trắng
+	+ Đang thăm thể hiện màu xám
+	+ Thăm xong thể hiện màu đen
+*** Tìm kiếm theo chiều rộng ( breadth first search)
+	output: 
+	+ d[v] là khoảng cách ngắn nhất từ s đến v, nếu không có thì d[v] = ~8
+	+ pi[v] = u, đỉnh đi trước v trong đường đi từ s đến v cơ độ dài d[v]
+	+ tập đỉnh tới được từ s
+	Ứng dụng trực tiếp của BFS
+	+ Kiểm tra tính liên thông của đồ thị
+	+ Xét sự tồn tại của đường đi từ đỉnh s -> đỉnh t nào đó: BFS tìm được đường đi ngắn nhất theo số cạnh
+	+ Đếm số thành phần liên thông
+	+ Kiểm tra cạnh cầu của đồ thị
+	+ Kiểm tra đỉnh rẽ nhánh

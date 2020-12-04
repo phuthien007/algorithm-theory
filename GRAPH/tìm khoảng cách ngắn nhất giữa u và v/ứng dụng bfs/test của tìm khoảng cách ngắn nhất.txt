@@ -1,0 +1,16 @@
+8 11
+1 6
+2 3
+2 5
+2 6
+3 4
+3 7
+3 8
+4 7
+5 6
+6 7
+7 8
+3 4
+nhập vào n,m là số đỉnh và cạnh của đồ thị
+m dòng tiếp theo là mqh giữa các đỉnh
+dòng cuối là 2 đỉnh muốn tìm kc ngắn nhất
