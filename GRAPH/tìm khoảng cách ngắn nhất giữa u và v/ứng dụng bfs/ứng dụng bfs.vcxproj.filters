@@ -18,10 +18,10 @@
     <ClCompile Include="tìm khoảng cách ngắn nhất giữa u và v.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="in chu trình của đồ thị euler hamilton.cpp">
+    <ClCompile Include="kiểm tra tính liên thông của đồ thị, đếm số thành phần liên thông.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
-    <ClCompile Include="kiểm tra tính liên thông của đồ thị, đếm số thành phần liên thông.cpp">
+    <ClCompile Include="kiểm tra đỉnh rẽ nhánh, đếm.cpp">
       <Filter>Source Files</Filter>
     </ClCompile>
   </ItemGroup>
