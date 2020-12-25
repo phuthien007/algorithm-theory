@@ -1,0 +1,17 @@
+Cây nhị phân là cây mà mỗi node không có quá 2 node con.
+=> Mỗi node trên cây hoặc:	
+	+ Không có con nào
+	+ chỉ có con trái
+	+ chỉ có con phải
+	+ có cả hai con
+Mỗi node trên cây sẽ bao gồm: data, con trỏ trỏ đến con trái/ phải
+Cây nhị phân tìm kiếm (BST):
+ mỗi node sẽ có các trường đi kèm: pleft, pright, pa, key.
+mỗi node có một khóa duy nhất. Tất cả các node con trái đều có khóa nhỏ hơn khóa của node cha.
+Tất cả các node con phải đều có khóa lớn hơn hoặc bằng khóa của cha
+Các phép toán trên BST hay dùng:
++ Tìm kiếm (SEARCH): trả về node nếu tìm được, ngược lại trả về NULL
++ Tìm kiếm cực tiểu, cực đại ( findMin, findMax): trả về node có key bé nhất( lớn nhất) trong cây
++ Kế cận trước, kế cận sau( preDecessor, suCcessor) : 
+	- Kế cận trước: trả về node lớn nhất nhỏ hơn node đang xét
+	- Kế cận sau: trả về node bé nhất lớn hơn node đang xét
