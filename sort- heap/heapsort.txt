@@ -1,0 +1,23 @@
+* Cấu trúc dữ liệu đống: Đống( heap) là cây nhị phân có tính chất:
+	- Tính cấu trúc: tất cả các mức đều đầy ngoại trừ mức cuối cùng trái nhất
+	- Tính có thứ tự hay tính chất đống:
+		+ Parent(x) >= x: max- heap : cây nhị phân có tính chất các node con nhỏ hơn cha
+		+ Parent(x) <= x: min- heap
+* phép toán đối với đống ( Operations on Heaps)
+	- Khôi phục tính chất max-heap(Vun lại đống): MAX-HEAPIFY
+	Giả thiết là chỉ có một node nằm sai vị trí.
+	Cách làm: ta sẽ đổi chỗ node sai cho node con lớn nhất, cứ thế cho đén khi không còn node con nào bé hơn
+	- Tạo max-heap từ một mảng không được sắp xếp: BUILD-MAX-HEAP
+	Cách làm: ta sẽ làm việc đối với các node trong của cây, tức là từ node n/2 về node đầu tiên. cứ thế dùng MAX_HEAPIFY
+Biểu diễn bằng mảng.
+- Ý tưởng sắp xếp vun đống.
+ Đầu tiên ta BUILD_MAX_HEAP
+ Tiếp đến ta sẽ nhận được node lớn nhất ở đầu. đổi chỗ xuống dưới và gọi lại MAX-HEAPIFY cho n-1 phân tử còn lại.
+ Lặp n-1 lần sẽ được mảng đã sắp xếp.
+* Hàng đợi ưu tiên sử dụng cấu trúc dữ liệu đống. Hàng đợi ưu tiên là hàng đợi được xếp theo khóa key
+ Các thao tác thường dùng với hàng đợi ưu tiên
+	+ Increase-Key(S,x,k): tăng khóa x thành k	
+	+ insert(S,x): bổ sung phần tử x vào S
+	+ MAX(S) : trả lại phần tử lớn nhất 
+	+ Extract-MAX(S): lấy ra và loại bỏ phần tử lớn nhất
+	
